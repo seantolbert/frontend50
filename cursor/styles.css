@@ -56,15 +56,7 @@ body {
   font-size: 2rem;
   padding: 10px;
   border-radius: 10px;
+  margin: 20px;
 }
 
-.green {
-  border: 5px solid green;
-}
-.purple {
-  border: 5px solid purple;
-}
-.orange {
-  border: 5px solid orange;
-}
 

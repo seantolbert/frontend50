@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+.container {
+  background: #474747;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+input {
+  border-radius: 5px;
+  background: #474747;
+  box-shadow: 13px 13px 26px #3e3e3e, -13px -13px 26px #505050;
+  outline: none;
+  border: none;
+  height: 60px;
+  font-size: 1rem;
+  padding: 0 10px;
+  color: turquoise;
+  transition: box-shadow 0.3s;
+  font-size: 1.4rem;
+}
+
+input:hover {
+  box-shadow: 13px 13px 26px #353535, -13px -13px 26px #595959;
+  background: #474747;
+}
+
+input:focus {
+  box-shadow: inset 13px 13px 26px #353535, inset -13px -13px 26px #595959;
+}

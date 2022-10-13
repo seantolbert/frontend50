@@ -10,10 +10,21 @@ const red = document.querySelector(".red");
 document.addEventListener("mousemove", (e) => {
   gsap.to(container, {
     duration: 0.1,
-    x: `${e.pageX - 350}px`,
-    y: `${e.pageY - 350}px`,
+    left: `${e.pageX}px`,
+    top: `${e.pageY}px`,
   });
 });
+
+// touch accessible video tutorial
+// https://www.youtube.com/watch?v=62BCYtJX2tY
+// function isTouchDevice() {
+//   try {
+//     document.createEvent("TouchEvent");
+//     return true;
+//   } catch (e) {
+//     return false;
+//   }
+// }
 
 // defining the separate circle rotation animation
 // the time scalse starts at 0,
@@ -47,16 +58,36 @@ document.addEventListener("mouseleave", (e) => {
 // adding mouse hover effects to the buttons
 greenButton.addEventListener("mouseenter", (e) => {
   gsap.to(tl, { timeScale: 0 });
-  gsap.to(blue, { duration: 0.7, opacity: 0 });
-  gsap.to(yellow, { duration: 0.2, x: -40, opacity: 0 });
-  gsap.to(red, { duration: 0.2, x: 40, zIndex: -2 });
+  // gsap.to(container, {
+  //   duration: 0.7,
+  //   top: getDocumentOffsetPosition(greenButton).top,
+  //   left: getDocumentOffsetPosition(greenButton).left,
+  //   ease: "elastic",
+  // });
   gsap.to(greenButton, { duration: 0.7, color: "green" });
 });
 
 greenButton.addEventListener("mouseleave", (e) => {
   gsap.to(tl, { timeScale: 1 });
-  gsap.to(blue, { duration: 0.7, opacity: 1 });
-  gsap.to(yellow, { duration: 0.7, x: 0, opacity: 1 });
-  gsap.to(red, { duration: 0.7, x: 0, zIndex: 0 });
+  // gsap.to(container, {
+  //   duration: 0.5,
+  //   left: `${e.pageX}px`,
+  //   top: `${e.pageY}px`,
+  //   ease: "elastic",
+  // });
   gsap.to(greenButton, { duration: 0.7, color: "white" });
 });
+
+// grab an element's position
+function getDocumentOffsetPosition(el) {
+  let top = 0,
+    left = 0;
+  while (el !== null) {
+    top += el.offsetTop;
+    left += el.offsetLeft;
+    el = el.offsetParent;
+  }
+  return { top, left };
+}
+
+console.log(getDocumentOffsetPosition(greenButton));

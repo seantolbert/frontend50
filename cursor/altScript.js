@@ -9,8 +9,8 @@ let cursorX = 0,
   currentY = 0;
 
 window.addEventListener("mousemove", (e) => {
-  cursorX = e.clientX - 310;
-  cursorY = e.clientY - 290;
+  cursorX = e.clientX;
+  cursorY = e.clientY;
 });
 
 function follow(start, end, t) {
