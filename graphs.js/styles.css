@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  color: #e3e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.card {
+  background: #1b1b1b;
+  width: 300px;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card button {
+  background: transparent;
+  border: 0;
+  color: #f9f9f9;
+  width: 50px;
+  border-radius: 5px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.card button.active {
+  background: #8f44fd;
+  font-family: inherit;
+}
+

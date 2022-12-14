@@ -5,22 +5,6 @@ jokeBtn.addEventListener("click", generateJoke);
 
 generateJoke();
 
-// syncronous
-// function generateJoke() {
-//   const config = {
-//     headers: {
-//       Accept: "application/json",
-//     },
-//   };
-
-//   fetch("https://icanhazdadjoke.com", config)
-//     .then((res) => res.json())
-//     .then((data) => {
-//       jokeEl.innerHTML = data.joke;
-//     });
-// }
-
-// asyncronous
 async function generateJoke() {
   const config = {
     headers: {
